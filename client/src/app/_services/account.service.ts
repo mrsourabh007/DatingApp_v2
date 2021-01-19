@@ -1,8 +1,14 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { from, ReplaySubject } from 'rxjs';
 import { map } from 'rxjs/operators'
 import { User } from '../_models/user';
+
+// const httpOptions ={
+//   headers: new HttpHeaders({
+//     Authorization: 'Bearer '+JSON.parse(localStorage.getItem('user')).token
+//   })
+// }
 
 @Injectable({
   providedIn: 'root'
