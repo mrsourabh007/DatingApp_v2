@@ -10,7 +10,13 @@ export class TestErrorsComponent implements OnInit {
   baseUrl = "https://localhost:5001/api/"
   validationErrors: string[]=[];
   constructor(private http: HttpClient) { }
-
+public list=[{
+  text:"text1",
+  val:"1"
+},{
+  text:"text2",
+  val:"2"
+}]
   ngOnInit(): void {
   }
   get404Error() {
