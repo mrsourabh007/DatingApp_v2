@@ -46,8 +46,7 @@ export class RegisterComponent implements OnInit {
         ? null : { isMatching: true }
     }
   }
-  register() {
-   
+  register() {   
     this.accountService.register(this.registerForm.value).subscribe(response => {
     this.routar.navigateByUrl('/members');
     }, error => {

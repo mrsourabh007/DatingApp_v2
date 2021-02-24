@@ -23,6 +23,7 @@ import { JwtInterceptor } from './_interceptors/jwt.interceptor';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { TextInputComponent } from './_forms/text-input/text-input.component';
 import { DateInputComponent } from './_forms/date-input/date-input.component';
+import { SelectInputComponent } from './_forms/select-input/select-input.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DateInputComponent } from './_forms/date-input/date-input.component';
     MemberCardComponent,
     MemberEditComponent,
     TextInputComponent,
-    DateInputComponent
+    DateInputComponent,
+    SelectInputComponent
   ],
   imports: [
     BrowserModule,

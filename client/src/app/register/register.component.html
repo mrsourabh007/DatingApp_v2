@@ -20,6 +20,7 @@
     </app-text-input>
     <app-text-input [formControl]='registerForm.controls["confirmPassword"]' [label]='"Confirm Password"'
         [type]='"password"'></app-text-input>
+        <app-select-input [formControl]='registerForm.controls["username"]' [label]='"Username"'></app-select-input>
 
     <div class="row " *ngIf="validationErrors.length>0">
         <ul class="text-danger">
