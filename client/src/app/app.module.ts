@@ -27,6 +27,7 @@ import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
 import { HasRoleDirective } from './_directives/has-role.directive';
 import { UserManagementComponent } from './admin/user-management/user-management.component';
 import { RolesModalComponent } from './modals/roles-modal/roles-modal.component';
+import { SelectInputComponent } from './_forms/select-input/select-input.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { RolesModalComponent } from './modals/roles-modal/roles-modal.component'
     AdminPanelComponent,
     HasRoleDirective,
     UserManagementComponent,
-    RolesModalComponent
+    RolesModalComponent,
+    SelectInputComponent
   ],
   imports: [
     BrowserModule,

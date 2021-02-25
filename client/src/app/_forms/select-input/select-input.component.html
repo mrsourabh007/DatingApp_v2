@@ -1,0 +1,9 @@
+<div class="form-group">
+    <select 
+        [class.is-invalid]="ngControl.touched && ngControl.invalid"
+        class="form-control" 
+        [formControl]="ngControl.control">
+        <option value="">{{label}}</option></select>
+    <div *ngIf="ngControl.control.errors?.required" class="invalid-feedback">Please enter a {{label}}</div>
+  
+</div>
