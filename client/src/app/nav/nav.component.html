@@ -9,8 +9,11 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink='/lists' routerLinkActive='active'>Lists</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" *appHasRole='["Member"]'>
                     <a class="nav-link " routerLink='/messages' routerLinkActive='active'>Massages</a>
+                </li>
+                <li class="nav-item"  *appHasRole='["Admin","Moderator"]'>
+                    <a class="nav-link " routerLink='/admin' routerLinkActive='active'>Admin</a>
                 </li>
             </ng-container>
             <li class="nav-item">
@@ -19,7 +22,7 @@
 
         </ul>
         <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-            <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username | titlecase}}</a>
+            <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{user.username || user.username | titlecase}}</a>
             <div class="dropdown-menu mt-3" *dropdownMenu>
                 <a routerLink='/member/edit' class="dropdown-item">Edit Profile</a>
                 <div class="dropdown-divider"></div>
