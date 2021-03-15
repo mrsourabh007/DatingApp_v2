@@ -20,7 +20,7 @@ export class AccountService {
         const user = response;
         if (user) {
           this.setCurrentUser(user);
-          this.currentUserSource.next(user);
+         // this.currentUserSource.next(user);
         }
       })
     )
@@ -30,7 +30,7 @@ register(model: any){
     map((user: User)=> {
       if(user) {
         this.setCurrentUser(user);
-        this.currentUserSource.next(user);
+       // this.currentUserSource.next(user);
       }
       return user;
     })
